@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="icon" href="grocery.icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="product-card">
+    <img src="imge.jpeg" alt="Product Image" class="product-img">
+    <div class="product-title">クラシック</div>
+    <div class="product-price">$50.60EGP</div>
+    <button ><a href="addtocard.html" class="btn">Add to Cart</a></button>
+  </div>
+
+    <div class="container">
+        <header> 
+            <h1>LIST PRODUCT</h1>
+            <div class="iconcart">
+                <img src="shopping-cart.png">
+                <div class="total">0</div>
+            </div>
+        </header>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="listCart">
+                <div class="item">
+                    <div class="content">
+                        <div class="name">Product name</div>
+                        <div class="price">Product price</div>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <span class="value">1</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <div class="close">Close</div>
+            <div class="checkout">
+                <a href="addtocard.html">Checkout</a>
+            </div>
+        </div>
+    </div>
+    <script>
+      // Get references to elements
+      const cart = document.querySelector('.cart');
+      const openCartBtn = document.querySelector('.iconcart img');
+      const closeCartBtn = document.querySelector('.close');
+
+      // Function to open the cart
+      function openCart() {
+          cart.style.transform = 'translateX(0)';
+      }
+
+      // Function to close the cart
+      function closeCart() {
+          cart.style.transform = 'translateX(100%)';
+      }
+
+      // Event listener for opening the cart
+      openCartBtn.addEventListener('click', openCart);
+
+      // Event listener for closing the cart
+      closeCartBtn.addEventListener('click', closeCart);
+  </script>
+</body>
+</html>

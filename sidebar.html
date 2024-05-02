@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Card</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="icon" href="grocery.icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="cart-container">
+        <button class="open-cart-btn" onclick="openCart()">Open Cart</button>
+        <aside class="cart-sidebar" id="cartSidebar">
+            <button class="close-cart-btn" onclick="closeCart()">Close Cart</button>
+            <h2>Your Cart</h2>
+            <ul class="cart-items">
+                <!-- Cart items will be dynamically populated here -->
+            </ul>
+            <button class="checkout-btn">Checkout</button>
+        </aside>
+    </div>
+
+    <script>
+        function openCart() {
+            document.getElementById("cartSidebar").style.right = "0";
+        }
+
+        function closeCart() {
+            document.getElementById("cartSidebar").style.right = "-300px"; // Adjust as needed
+        }
+    </script>
+</body>
+</html>
